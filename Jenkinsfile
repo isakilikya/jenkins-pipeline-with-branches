@@ -12,12 +12,17 @@ pipeline {
                 echo '$env.BUILD_ID'
                 echo '$BUILD_ID'
                 echo '$BRANCH_NAME'
+                echo '$env.BRANCH_NAME'
+                echo $env.BRANCH_NAME
+                echo '${env.BRANCH_NAME}'
+                echo ${env.BRANCH_NAME}
+                echo '${BRANCH_NAME}'
             }
         }
         stage('Test') {
             steps {
                 echo 'Test'
-                echo '$BRANCH_NAME'
+                echo '${env.BRANCH_NAME}'
             }
         }
         stage('Develop') {
@@ -26,7 +31,7 @@ pipeline {
             }
             steps {
                 echo 'Develop'
-                echo '$BRANCH_NAME'
+                echo '${env.BRANCH_NAME}'
             }
         }
         stage('Deploy') {
@@ -35,7 +40,7 @@ pipeline {
             }
             steps {
                 echo 'Deploy'
-                echo '$BRANCH_NAME'
+                echo '${env.BRANCH_NAME}'
             }
         }
     }
