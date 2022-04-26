@@ -13,9 +13,7 @@ pipeline {
                 echo '$BUILD_ID'
                 echo '$BRANCH_NAME'
                 echo '$env.BRANCH_NAME'
-                echo $env.BRANCH_NAME
                 echo '${env.BRANCH_NAME}'
-                echo ${env.BRANCH_NAME}
                 echo '${BRANCH_NAME}'
             }
         }
