@@ -29,7 +29,7 @@ pipeline {
                 echo '$BRANCH_NAME'
             }
         }
-        stage('Deploy' {
+        stage('Deploy') {
             when {
                 branch 'main'
             }
